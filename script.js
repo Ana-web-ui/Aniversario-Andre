@@ -79,7 +79,6 @@ function shower(x, y) {
     // ========================
     const gifList = [
       "meme1.gif",
-      "meme2.gif",
       "meme3.gif",
       "meme4.gif",
       "meme5.gif",
@@ -114,3 +113,4 @@ function shower(x, y) {
 
 
     }, { once: true });
+
