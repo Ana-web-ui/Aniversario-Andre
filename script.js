@@ -78,12 +78,12 @@ function shower(x, y) {
     // 2) GIFS ALEATÓRIOS
     // ========================
     const gifList = [
-      ".images/meme1.gif",
-      "images/meme2.gif",
-      "images/meme3.gif",
-      "images/meme4.gif",
-      "images/meme5.gif",
-      "images/meme6.gif",
+      "meme1.gif",
+      "meme2.gif",
+      "meme3.gif",
+      "meme4.gif",
+      "meme5.gif",
+      "meme6.gif",
     ];
 
     function spawnGif() {
@@ -111,5 +111,6 @@ function shower(x, y) {
 
         // 🎭 loop dos gifs
         setInterval(spawnGif, 4000);
+
 
     }, { once: true });
