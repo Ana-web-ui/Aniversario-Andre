@@ -1,0 +1,78 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #000; /* fundo escuro p/ destacar os fogos */
+  overflow: hidden;
+  font-family: sans-serif;
+}
+
+#hanabi {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0; /* fogos ficam atrás */
+}
+
+.container {
+  position: relative;
+  text-align: center;
+  z-index: 1; /* fica acima dos fogos */
+}
+
+#birthdayImage {
+  cursor: pointer;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+#birthdayImage:hover {
+  transform: scale(1.05);
+}
+
+#happyBirthdayText {
+  margin-top: 20px;
+  color: #fff;
+  font-size: 4em;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: opacity 1s ease-in-out, transform 0.5s ease-in-out;
+  transform: scale(0.5);
+}
+
+#happyBirthdayText.visible {
+  opacity: 1;
+  transform: scale(1.2) rotate(-5deg);
+  animation: bounce 1.5s infinite alternate;
+}
+.random-gif {
+  position: absolute;
+  top: 0;
+  width: 220px; /* Aumentei o tamanho */
+  height: auto;
+  pointer-events: none;
+  animation: moveAcross 10s linear forwards;
+  z-index: 5; /* passa em cima de tudo */
+}
+
+@keyframes moveAcross {
+  from {
+    transform: translateX(-250px);
+  }
+  to {
+    transform: translateX(120vw);
+  }
+}
+
+@keyframes bounce {
+  from {
+    transform: scale(1.2) rotate(-5deg);
+  }
+  to {
+    transform: scale(1.4) rotate(5deg);
+  }
+}
